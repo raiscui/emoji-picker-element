@@ -132,3 +132,5 @@ dist
 /test/benchmark/node_modules
 /test/benchmark/data.json
 /i18n
+.vscode/settings.json
+package-lock.json
