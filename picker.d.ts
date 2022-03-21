@@ -1,5 +1,12 @@
-import { I18n, PickerConstructorOptions, EmojiPickerEventMap, CustomEmoji } from "./shared";
-export default class Picker extends HTMLElement {
+import {
+    I18n,
+    PickerConstructorOptions,
+    EmojiPickerEventMap,
+    CustomEmoji
+} from './shared';
+// export default (void)=> typeof Picker;
+
+export class Picker extends HTMLElement {
     dataSource: string;
     locale: string;
     i18n: I18n;
@@ -15,15 +22,38 @@ export default class Picker extends HTMLElement {
      * @param customEmoji - Array of custom emoji
      * @param customCategorySorting - Function to sort custom category strings (sorted alphabetically by default)
      */
-    constructor({ dataSource, locale, i18n, skinToneEmoji, customEmoji, customCategorySorting }?: PickerConstructorOptions);
+    constructor({
+        dataSource,
+        locale,
+        i18n,
+        skinToneEmoji,
+        customEmoji,
+        customCategorySorting
+    }?: PickerConstructorOptions);
 
-    addEventListener<K extends keyof EmojiPickerEventMap>(type: K, listener: (this: Picker, ev: EmojiPickerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-    addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-    removeEventListener<K extends keyof EmojiPickerEventMap>(type: K, listener: (this: Picker, ev: EmojiPickerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    addEventListener<K extends keyof EmojiPickerEventMap>(
+        type: K,
+        listener: (this: Picker, ev: EmojiPickerEventMap[K]) => any,
+        options?: boolean | AddEventListenerOptions
+    ): void;
+    addEventListener(
+        type: string,
+        listener: EventListenerOrEventListenerObject,
+        options?: boolean | AddEventListenerOptions
+    ): void;
+    removeEventListener<K extends keyof EmojiPickerEventMap>(
+        type: K,
+        listener: (this: Picker, ev: EmojiPickerEventMap[K]) => any,
+        options?: boolean | EventListenerOptions
+    ): void;
+    removeEventListener(
+        type: string,
+        listener: EventListenerOrEventListenerObject,
+        options?: boolean | EventListenerOptions
+    ): void;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "emoji-picker": Picker;
+        'emoji-picker': Picker;
     }
 }
