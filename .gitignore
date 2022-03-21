@@ -115,10 +115,10 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
-/database.js
-/database.js.map
-/picker.js
-/picker.js.map
+
+
+
+
 /trimEmojiData.js
 /trimEmojiData.js.map
 /trimEmojiData.cjs
